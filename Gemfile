@@ -35,13 +35,14 @@ gem 'test-unit'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  gem 'rspec-rails' ,'3.3.3'
+  gem 'rspec-rails' ,'3.3.3'  
   gem 'capybara', '2.7.1'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end
 
 group :development do
+  gem 'guard-rspec', '4.6.5'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
@@ -49,3 +50,9 @@ group :development do
   gem 'spring'
 end
 
+group :test do
+  gem 'rb-inotify', '0.9.7'
+  gem 'libnotify', '0.9.1'
+  gem 'guard-spork', '2.1.0'
+  gem 'spork', '1.0.0rc4'
+end
